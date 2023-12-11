@@ -8,22 +8,22 @@
 
 <ion-content class="ion-padding">
   <ion-card *ngIf="isMobile" class="ion-padding">
-    <ion-card-header>
+    <ion-card-header class="ion-padding">
       Estás en un dispositivo móvil.
     </ion-card-header>
     <ion-card-content>
-      <img src="assets/icon/frame.png" alt="Imagen">
+      <ion-button (click)="descargarApk()" expand="full" >Descargar APK</ion-button>
       Contenido específico para dispositivos móviles.
     </ion-card-content>
   </ion-card>
 
   <ion-card *ngIf="!isMobile" class="ion-padding">
-    <ion-card-header>
+    <ion-card-header class="ion-padding">
       Estás en una computadora.
     </ion-card-header>
     <ion-card-content>
       Contenido específico para computadoras.
-      <ion-button (click)="descargarApk()" expand="full">Descargar APK</ion-button>
+      <img src="assets/icon/frame.png" alt="Imagen">
     </ion-card-content>
   </ion-card>
 </ion-content>
